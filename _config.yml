@@ -2,12 +2,12 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://syang.github.io
+title: A Dreamer, a Writer
+subtitle: BigData Infrastructure, Cloud Computing, Devops Reflection
+author: Shuo Yang
 simple_search: http://google.com/search
-description:
+description: Cloud Computing, OpenStack, BigData Infrastructure, Devops
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -90,11 +90,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: syanggithubcom
+disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-2802378-9
 
 # Facebook Like
 facebook_like: false
