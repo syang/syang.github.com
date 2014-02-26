@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[A Dreamer, a Writer]]></title>
+  <link href="http://syang.github.io/atom.xml" rel="self"/>
+  <link href="http://syang.github.io/"/>
+  <updated>2014-02-25T16:21:25-08:00</updated>
+  <id>http://syang.github.io/</id>
+  <author>
+    <name><![CDATA[Shuo Yang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Started on Octopress]]></title>
+    <link href="http://syang.github.io/blog/2014/02/25/getting-started-on-octopress/"/>
+    <updated>2014-02-25T16:10:44-08:00</updated>
+    <id>http://syang.github.io/blog/2014/02/25/getting-started-on-octopress</id>
+    <content type="html"><![CDATA[<p>Octopress is a blogging engine built on top of Jekyll, and its documentation can be found at <a href="http://octopress.org/docs/">http://octopress.org/docs/</a></p>
+]]></content>
+  </entry>
+  
+</feed>
