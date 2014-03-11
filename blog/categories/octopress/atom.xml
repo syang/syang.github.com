@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | A Dreamer, a Writer]]></title>
+  <link href="http://syang.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://syang.github.io/"/>
+  <updated>2014-03-11T14:58:20-07:00</updated>
+  <id>http://syang.github.io/</id>
+  <author>
+    <name><![CDATA[Shuo Yang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Started on Octopress]]></title>
+    <link href="http://syang.github.io/blog/2014/02/25/getting-started-on-octopress/"/>
+    <updated>2014-02-25T16:10:44-08:00</updated>
+    <id>http://syang.github.io/blog/2014/02/25/getting-started-on-octopress</id>
+    <content type="html"><![CDATA[<p>Octopress is a blogging engine built on top of Jekyll, and its documentation can be found at <a href="http://octopress.org/docs/,">http://octopress.org/docs/,</a> but here is a quick
+summary of how to use it along with github pages.</p>
+
+<h2>Github User pages</h2>
+
+<p>As how this blog is hosted, Github can help you host a blog from <code>http://username.github.com</code>.</p>
+
+<p>You need to first setup a user account <code>username</code>, and then you need to create a repo as<code>http://www.github.com/username/username.github.com</code>.</p>
+
+<h2>Setup your blog configuration with Rake (One time work)</h2>
+
+<p>Octopress provides a configuration task that helps you set up all config related to your blog using the following command.
+<code>sh
+rake setup_github_pages
+</code>
+Copy the SSH or HTTPS URL from your newly created repository (e.g. <code>git@github.com:username/username.github.io.git</code>)
+and paste it in as a response.</p>
+
+<h2>Write your blog posts</h2>
+
+<p>You need to run the following command to create a new blog entry.
+<code>sh
+rake new_post["title"]
+</code>
+And you can use your favorite editor to edit the blog post content.</p>
+
+<p>Moreover, you can <strong> Specify the page name and location </strong>
+You can add pages anywhere in your blog source directory and they&rsquo;ll be parsed by Jekyll. The URL will correspond directly to the filepath, so <code>about.markdown</code> will become <code>site.com/about.html</code>. If you prefer the URL <code>site.com/about/</code> you&rsquo;ll want to create the page as <code>about/index.markdown</code>. Octopress has a rake task for creating new pages easily.</p>
+
+<p>```sh
+rake new_page[super-awesome]</p>
+
+<h1>creates /source/super-awesome/index.markdown</h1>
+
+<p>rake new_page[super-awesome/page.html]</p>
+
+<h1>creates /source/super-awesome/page.html</h1>
+
+<p>```</p>
+
+<h2>Generate and Preview Site</h2>
+
+<p><code>sh
+rake generate   # Generates posts and pages into the public directory
+rake watch      # Watches source/ and sass/ for changes and regenerates
+rake preview    # Watches, and mounts a webserver at http://localhost:4000
+</code></p>
+
+<h2>Last, Push to Github to Publish</h2>
+
+<p>Publish the comment by the following, which push the generated site to <code>master</code> branch
+<code>sh
+rake generate
+rake deploy
+</code></p>
+
+<p>Do not forget to push the <code>source</code> branch
+<code>sh
+git add .
+git commit -m 'your message'
+git push origin source
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
