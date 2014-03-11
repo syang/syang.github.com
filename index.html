@@ -9,8 +9,8 @@
   <meta name="author" content="Shuo Yang">
 
   
-  <meta name="description" content="Octopress is a blogging engine built on top of Jekyll, and its documentation can be found at http://octopress.org/docs/
-">
+  <meta name="description" content="Octopress is a blogging engine built on top of Jekyll, and its documentation can be found at http://octopress.org/docs/, but here is a quick
+summary &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -110,7 +110,88 @@
   </header>
 
 
-  <div class="entry-content"><p>Octopress is a blogging engine built on top of Jekyll, and its documentation can be found at <a href="http://octopress.org/docs/">http://octopress.org/docs/</a></p>
+  <div class="entry-content"><p>Octopress is a blogging engine built on top of Jekyll, and its documentation can be found at <a href="http://octopress.org/docs/,">http://octopress.org/docs/,</a> but here is a quick
+summary of how to use it along with github pages.</p>
+
+<h2>Github User pages</h2>
+
+<p>As how this blog is hosted, Github can help you host a blog from <code>http://username.github.com</code>.</p>
+
+<p>You need to first setup a user account <code>username</code>, and then you need to create a repo as<code>http://www.github.com/username/username.github.com</code>.</p>
+
+<h2>Setup your blog configuration with Rake (One time work)</h2>
+
+<p>Octopress provides a configuration task that helps you set up all config related to your blog using the following command.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake setup_github_pages
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Copy the SSH or HTTPS URL from your newly created repository (e.g. <code>git@github.com:username/username.github.io.git</code>)
+and paste it in as a response.</p>
+
+<h2>Write your blog posts</h2>
+
+<p>You need to run the following command to create a new blog entry.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And you can use your favorite editor to edit the blog post content.</p>
+
+<p>Moreover, you can <strong> Specify the page name and location </strong>
+You can add pages anywhere in your blog source directory and they&rsquo;ll be parsed by Jekyll. The URL will correspond directly to the filepath, so <code>about.markdown</code> will become <code>site.com/about.html</code>. If you prefer the URL <code>site.com/about/</code> you&rsquo;ll want to create the page as <code>about/index.markdown</code>. Octopress has a rake task for creating new pages easily.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake new_page<span class="o">[</span>super-awesome<span class="o">]</span>
+</span><span class='line'><span class="c"># creates /source/super-awesome/index.markdown</span>
+</span><span class='line'>
+</span><span class='line'>rake new_page<span class="o">[</span>super-awesome/page.html<span class="o">]</span>
+</span><span class='line'><span class="c"># creates /source/super-awesome/page.html</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Generate and Preview Site</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate   <span class="c"># Generates posts and pages into the public directory</span>
+</span><span class='line'>rake watch      <span class="c"># Watches source/ and sass/ for changes and regenerates</span>
+</span><span class='line'>rake preview    <span class="c"># Watches, and mounts a webserver at http://localhost:4000</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Last, Push to Github to Publish</h2>
+
+<p>Publish the comment by the following, which push the generated site to <code>master</code> branch</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate
+</span><span class='line'>rake deploy
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Do not forget to push the <code>source</code> branch</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s1">&#39;your message&#39;</span>
+</span><span class='line'>git push origin <span class="nb">source</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
