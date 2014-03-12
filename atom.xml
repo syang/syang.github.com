@@ -4,7 +4,7 @@
   <title><![CDATA[A Dreamer, a Writer]]></title>
   <link href="http://syang.github.io/atom.xml" rel="self"/>
   <link href="http://syang.github.io/"/>
-  <updated>2014-03-11T16:14:15-07:00</updated>
+  <updated>2014-03-11T18:49:56-07:00</updated>
   <id>http://syang.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -12,6 +12,95 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Setup for Ansible]]></title>
+    <link href="http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible/"/>
+    <updated>2014-03-11T16:27:55-07:00</updated>
+    <id>http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible</id>
+    <content type="html"><![CDATA[<h3>Prerequisite: Install Vundle</h3>
+
+<p><a href="https://github.com/gmarik/Vundle.vim">Vundle</a> is short for <em>Vim Bundle</em>, which is a plug-in manager for vim. If you want to use it for plug-in management, and read on.</p>
+
+<p>Suppose you have already installed <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">Git</a>, set up Vundle from the source</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Configure the Ansible Bundle in .vimrc</h3>
+
+<p>Put the following at the top of your .vimrc</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">set </span>nocompatible              <span class="s2">&quot; be iMproved, required</span>
+</span><span class='line'><span class="s2">filetype off                  &quot;</span> required
+</span><span class='line'>
+</span><span class='line'><span class="s2">&quot; set the runtime path to include Vundle and initialize</span>
+</span><span class='line'><span class="s2">set rtp+=~/.vim/bundle/vundle/</span>
+</span><span class='line'><span class="s2">call vundle#rc()</span>
+</span><span class='line'><span class="s2">&quot;</span> alternatively, pass a path where Vundle should install bundles
+</span><span class='line'><span class="s2">&quot;let path = &#39;~/some/path/here&#39;</span>
+</span><span class='line'><span class="s2">&quot;</span>call vundle#rc<span class="o">(</span>path<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="s2">&quot; let Vundle manage Vundle, required</span>
+</span><span class='line'><span class="s2">Bundle &#39;gmarik/vundle&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="s2">&quot;</span> Keep bundle commands between here and filetype plugin indent on.
+</span><span class='line'>Bundle <span class="s1">&#39;chase/vim-ansible-yaml&#39;</span>
+</span><span class='line'>
+</span><span class='line'>filetype plugin indent on     <span class="s2">&quot; required</span>
+</span><span class='line'>
+</span><span class='line'><span class="s2">&quot;</span> To ignore plugin indent changes, instead use:
+</span><span class='line'><span class="s2">&quot;filetype plugin on</span>
+</span><span class='line'><span class="s2">&quot;</span>
+</span><span class='line'><span class="s2">&quot; Brief help</span>
+</span><span class='line'><span class="s2">&quot;</span> :BundleList          - list configured bundles
+</span><span class='line'><span class="s2">&quot; :BundleInstall(!)    - install (update) bundles</span>
+</span><span class='line'><span class="s2">&quot;</span> :BundleSearch<span class="o">(</span>!<span class="o">)</span> foo - search <span class="o">(</span>or refresh cache first<span class="o">)</span> <span class="k">for </span>foo
+</span><span class='line'><span class="s2">&quot; :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles</span>
+</span><span class='line'><span class="s2">&quot;</span>
+</span><span class='line'><span class="s2">&quot; see :h vundle for more details or wiki for FAQ</span>
+</span><span class='line'><span class="s2">&quot;</span> NOTE: comments after Bundle commands are not allowed.
+</span><span class='line'><span class="err">&quot;</span> Put your stuff after this line
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Install Bundles:</h3>
+
+<p>Lauch <code>vim</code> and run <code>:BundleInstall</code> OR install directly from command line: <code>vim +BundleInstall +qall</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Getting Started on Octopress]]></title>

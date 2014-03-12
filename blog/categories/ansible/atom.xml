@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ansible | A Dreamer, a Writer]]></title>
+  <link href="http://syang.github.io/blog/categories/ansible/atom.xml" rel="self"/>
+  <link href="http://syang.github.io/"/>
+  <updated>2014-03-11T18:49:56-07:00</updated>
+  <id>http://syang.github.io/</id>
+  <author>
+    <name><![CDATA[Shuo Yang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Setup for Ansible]]></title>
+    <link href="http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible/"/>
+    <updated>2014-03-11T16:27:55-07:00</updated>
+    <id>http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible</id>
+    <content type="html"><![CDATA[<h3>Prerequisite: Install Vundle</h3>
+
+<p><a href="https://github.com/gmarik/Vundle.vim">Vundle</a> is short for <em>Vim Bundle</em>, which is a plug-in manager for vim. If you want to use it for plug-in management, and read on.</p>
+
+<p>Suppose you have already installed <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">Git</a>, set up Vundle from the source</p>
+
+<p><code>sh
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+</code></p>
+
+<h3>Configure the Ansible Bundle in .vimrc</h3>
+
+<p>Put the following at the top of your .vimrc</p>
+
+<p>```sh
+set nocompatible              &ldquo; be iMproved, required
+filetype off                  &rdquo; required</p>
+
+<p>&ldquo; set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+&rdquo; alternatively, pass a path where Vundle should install bundles
+&ldquo;let path = &lsquo;~/some/path/here&rsquo;
+"call vundle#rc(path)</p>
+
+<p>&ldquo; let Vundle manage Vundle, required
+Bundle &lsquo;gmarik/vundle&rsquo;</p>
+
+<p>&ldquo; Keep bundle commands between here and filetype plugin indent on.
+Bundle &lsquo;chase/vim-ansible-yaml&rsquo;</p>
+
+<p>filetype plugin indent on     &ldquo; required</p>
+
+<p>&ldquo; To ignore plugin indent changes, instead use:
+"filetype plugin on
+&rdquo;
+&ldquo; Brief help
+&rdquo; :BundleList          &ndash; list configured bundles
+&ldquo; :BundleInstall(!)    &ndash; install (update) bundles
+&rdquo; :BundleSearch(!) foo &ndash; search (or refresh cache first) for foo
+&ldquo; :BundleClean(!)      &ndash; confirm (or auto-approve) removal of unused bundles
+&rdquo;
+&ldquo; see :h vundle for more details or wiki for FAQ
+&rdquo; NOTE: comments after Bundle commands are not allowed.
+&ldquo; Put your stuff after this line</p>
+
+<p>```</p>
+
+<h3>Install Bundles:</h3>
+
+<p>Lauch <code>vim</code> and run <code>:BundleInstall</code> OR install directly from command line: <code>vim +BundleInstall +qall</code></p>
+]]></content>
+  </entry>
+  
+</feed>

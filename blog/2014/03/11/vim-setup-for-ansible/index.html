@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>A Dreamer, a Writer</title>
+  <title>Vim Setup for Ansible - A Dreamer, a Writer</title>
   <meta name="author" content="Shuo Yang">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://syang.github.io">
+  <link rel="canonical" href="http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="A Dreamer, a Writer" type="application/atom+xml">
@@ -76,15 +76,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/11/vim-setup-for-ansible/">Vim Setup for Ansible</a></h1>
+      <h1 class="entry-title">Vim Setup for Ansible</h1>
     
     
       <p class="meta">
@@ -102,15 +99,15 @@
 
 <time datetime="2014-03-11T16:27:55-07:00" pubdate data-updated="true">Mar 11<span>th</span>, 2014</time>
         
-           | <a href="/blog/2014/03/11/vim-setup-for-ansible/#disqus_thread"
-             data-disqus-identifier="http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible/">Comments</a>
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://syang.github.io">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><h3>Prerequisite: Install Vundle</h3>
+<div class="entry-content"><h3>Prerequisite: Install Vundle</h3>
 
 <p><a href="https://github.com/gmarik/Vundle.vim">Vundle</a> is short for <em>Vim Bundle</em>, which is a plug-in manager for vim. If you want to use it for plug-in management, and read on.</p>
 
@@ -192,22 +189,16 @@
 
 <p>Lauch <code>vim</code> and run <code>:BundleInstall</code> OR install directly from command line: <code>vim +BundleInstall +qall</code></p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/02/25/getting-started-on-octopress/">Getting Started on Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Shuo Yang</span></span>
+
+      
 
 
 
@@ -219,111 +210,44 @@
   
 
 
-<time datetime="2014-02-25T16:10:44-08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/02/25/getting-started-on-octopress/#disqus_thread"
-             data-disqus-identifier="http://syang.github.io/blog/2014/02/25/getting-started-on-octopress/">Comments</a>
-        
-      </p>
+<time datetime="2014-03-11T16:27:55-07:00" pubdate data-updated="true">Mar 11<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ansible/'>ansible</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible/" data-via="" data-counturl="http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible/" >Tweet</a>
+  
+  
+  
+</div>
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/25/getting-started-on-octopress/" title="Previous Post: getting started on Octopress">&laquo; getting started on Octopress</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-  <div class="entry-content"><p>Octopress is a blogging engine built on top of Jekyll, and its documentation can be found at <a href="http://octopress.org/docs/,">http://octopress.org/docs/,</a> but here is a quick
-summary of how to use it along with github pages.</p>
-
-<h2>Github User pages</h2>
-
-<p>As how this blog is hosted, Github can help you host a blog from <code>http://username.github.com</code>.</p>
-
-<p>You need to first setup a user account <code>username</code>, and then you need to create a repo as<code>http://www.github.com/username/username.github.com</code>.</p>
-
-<h2>Setup your blog configuration with Rake (One time work)</h2>
-
-<p>Octopress provides a configuration task that helps you set up all config related to your blog using the following command.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake setup_github_pages
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Copy the SSH or HTTPS URL from your newly created repository (e.g. <code>git@github.com:username/username.github.io.git</code>)
-and paste it in as a response.</p>
-
-<h2>Write your blog posts</h2>
-
-<p>You need to run the following command to create a new blog entry.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake new_post<span class="o">[</span><span class="s2">&quot;title&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>And you can use your favorite editor to edit the blog post content.</p>
-
-<p>Moreover, you can <strong> Specify the page name and location </strong>
-You can add pages anywhere in your blog source directory and they&rsquo;ll be parsed by Jekyll. The URL will correspond directly to the filepath, so <code>about.markdown</code> will become <code>site.com/about.html</code>. If you prefer the URL <code>site.com/about/</code> you&rsquo;ll want to create the page as <code>about/index.markdown</code>. Octopress has a rake task for creating new pages easily.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake new_page<span class="o">[</span>super-awesome<span class="o">]</span>
-</span><span class='line'><span class="c"># creates /source/super-awesome/index.markdown</span>
-</span><span class='line'>
-</span><span class='line'>rake new_page<span class="o">[</span>super-awesome/page.html<span class="o">]</span>
-</span><span class='line'><span class="c"># creates /source/super-awesome/page.html</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Generate and Preview Site</h2>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate   <span class="c"># Generates posts and pages into the public directory</span>
-</span><span class='line'>rake watch      <span class="c"># Watches source/ and sass/ for changes and regenerates</span>
-</span><span class='line'>rake preview    <span class="c"># Watches, and mounts a webserver at http://localhost:4000</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Last, Push to Github to Publish</h2>
-
-<p>Publish the comment by the following, which push the generated site to <code>master</code> branch</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>rake generate
-</span><span class='line'>rake deploy
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Do not forget to push the <code>source</code> branch</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s1">&#39;your message&#39;</span>
-</span><span class='line'>git push origin <span class="nb">source</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <section>
@@ -348,6 +272,7 @@ You can add pages anywhere in your blog source directory and they&rsquo;ll be pa
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -362,7 +287,10 @@ You can add pages anywhere in your blog source directory and they&rsquo;ll be pa
       var disqus_shortname = 'syanggithubcom';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible/';
+        var disqus_url = 'http://syang.github.io/blog/2014/03/11/vim-setup-for-ansible/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
