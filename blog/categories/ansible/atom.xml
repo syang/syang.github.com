@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ansible | A Dreamer, a Writer]]></title>
   <link href="http://syang.github.io/blog/categories/ansible/atom.xml" rel="self"/>
   <link href="http://syang.github.io/"/>
-  <updated>2014-03-12T21:44:01-07:00</updated>
+  <updated>2014-03-12T21:45:59-07:00</updated>
   <id>http://syang.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -28,9 +28,9 @@
 $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 </code></p>
 
-<h3>Configure the Ansible Bundle in your ~/.vimrc</h3>
+<h3>Configure the Ansible Bundle in your personal .vimrc</h3>
 
-<p>Put the following at the top of your .vimrc</p>
+<p>Put the following at the top of your ~/.vimrc</p>
 
 <p>```sh
 set nocompatible              &ldquo; be iMproved, required
