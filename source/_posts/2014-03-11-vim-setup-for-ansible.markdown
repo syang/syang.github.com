@@ -36,7 +36,14 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Keep bundle commands between here and filetype plugin indent on.
+" For Ansible formatting
 Bundle 'chase/vim-ansible-yaml'
+" For Go Language formatting
+Bundle 'jnwhiteh/vim-golang'
+" For HTML/CSS formatting
+Bundle 'mattn/emmet-vim'
+" For Chef script formatting
+Bundle 't9md/vim-chef'
 
 filetype plugin indent on     " required
 
