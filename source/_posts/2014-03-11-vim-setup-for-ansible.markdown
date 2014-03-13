@@ -17,9 +17,9 @@ Suppose you have already installed [Git](http://git-scm.com/book/en/Getting-Star
 $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 
-### Configure the Ansible Bundle in your ~/.vimrc 
+### Configure the Ansible Bundle in your personal .vimrc 
 
-Put the following at the top of your .vimrc
+Put the following at the top of your ~/.vimrc
 
 ```sh
 set nocompatible              " be iMproved, required
