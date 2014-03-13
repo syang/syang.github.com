@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ansible | A Dreamer, a Writer]]></title>
   <link href="http://syang.github.io/blog/categories/ansible/atom.xml" rel="self"/>
   <link href="http://syang.github.io/"/>
-  <updated>2014-03-11T18:49:56-07:00</updated>
+  <updated>2014-03-12T21:36:38-07:00</updated>
   <id>http://syang.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -47,7 +47,14 @@ call vundle#rc()
 Bundle &lsquo;gmarik/vundle&rsquo;</p>
 
 <p>&ldquo; Keep bundle commands between here and filetype plugin indent on.
-Bundle &lsquo;chase/vim-ansible-yaml&rsquo;</p>
+&rdquo; For Ansible formatting
+Bundle &lsquo;chase/vim-ansible-yaml&rsquo;
+&ldquo; For Go Language formatting
+Bundle &lsquo;jnwhiteh/vim-golang&rsquo;
+&rdquo; For HTML/CSS formatting
+Bundle &lsquo;mattn/emmet-vim&rsquo;
+&ldquo; For Chef script formatting
+Bundle &lsquo;t9md/vim-chef&rsquo;</p>
 
 <p>filetype plugin indent on     &ldquo; required</p>
 
