@@ -12,3 +12,4 @@ footer: true
 
 2. Interesting groups and people
     * [Petar Maymounkov](http://pdos.csail.mit.edu/~petar/)
+    * [http://www.scs.stanford.edu/~dm/home/papers/](http://www.scs.stanford.edu/~dm/home/papers/)
